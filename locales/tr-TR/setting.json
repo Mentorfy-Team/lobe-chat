@@ -4,7 +4,7 @@
   },
   "analytics": {
     "telemetry": {
-      "desc": "Anonim kullanım verilerini göndererek LobeChat'in genel kullanıcı deneyimini iyileştirmemize yardımcı olabilirsiniz",
+      "desc": "Anonim kullanım verilerini göndererek Mentorfy GPT'in genel kullanıcı deneyimini iyileştirmemize yardımcı olabilirsiniz",
       "title": "Anonim Kullanım Verileri Gönder"
     },
     "title": "Analitik"

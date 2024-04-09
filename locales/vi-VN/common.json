@@ -10,7 +10,7 @@
   },
   "about": "Giới thiệu",
   "advanceSettings": "Cài đặt nâng cao",
-  "appInitializing": "LobeChat đang khởi động, vui lòng chờ...",
+  "appInitializing": "Mentorfy GPT đang khởi động, vui lòng chờ...",
   "autoGenerate": "Tự động tạo",
   "autoGenerateTooltip": "Tự động hoàn thành mô tả trợ lý dựa trên từ gợi ý",
   "cancel": "Hủy",
@@ -167,9 +167,9 @@
   "telemetry": {
     "allow": "Cho phép",
     "deny": "Từ chối",
-    "desc": "Chúng tôi muốn thu thập thông tin về cách bạn sử dụng một cách ẩn danh để giúp chúng tôi cải thiện LobeChat và cung cấp trải nghiệm sản phẩm tốt hơn cho bạn. Bạn có thể tắt tính năng này bất kỳ lúc nào trong \"Cài đặt\" - \"Về\".",
+    "desc": "Chúng tôi muốn thu thập thông tin về cách bạn sử dụng một cách ẩn danh để giúp chúng tôi cải thiện Mentorfy GPT và cung cấp trải nghiệm sản phẩm tốt hơn cho bạn. Bạn có thể tắt tính năng này bất kỳ lúc nào trong \"Cài đặt\" - \"Về\".",
     "learnMore": "Tìm hiểu thêm",
-    "title": "Hỗ trợ LobeChat hoạt động tốt hơn"
+    "title": "Hỗ trợ Mentorfy GPT hoạt động tốt hơn"
   },
   "temp": "Tạm thời",
   "updateAgent": "Cập nhật thông tin trợ lý",

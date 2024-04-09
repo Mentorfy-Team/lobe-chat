@@ -10,7 +10,7 @@
   },
   "about": "Acerca de",
   "advanceSettings": "Configuración avanzada",
-  "appInitializing": "LobeChat está inicializando, por favor espere...",
+  "appInitializing": "Mentorfy GPT está inicializando, por favor espere...",
   "autoGenerate": "Generación automática",
   "autoGenerateTooltip": "Completar automáticamente la descripción del asistente basándose en las sugerencias",
   "cancel": "Cancelar",
@@ -167,9 +167,9 @@
   "telemetry": {
     "allow": "Permitir",
     "deny": "Denegar",
-    "desc": "Queremos recopilar información sobre tu uso de forma anónima para ayudarnos a mejorar LobeChat y ofrecerte una mejor experiencia de producto. Puedes desactivarlo en 'Configuración' - 'Acerca de' en cualquier momento.",
+    "desc": "Queremos recopilar información sobre tu uso de forma anónima para ayudarnos a mejorar Mentorfy GPT y ofrecerte una mejor experiencia de producto. Puedes desactivarlo en 'Configuración' - 'Acerca de' en cualquier momento.",
     "learnMore": "Más información",
-    "title": "Ayuda a mejorar LobeChat"
+    "title": "Ayuda a mejorar Mentorfy GPT"
   },
   "temp": "Temporal",
   "updateAgent": "Actualizar información del asistente",
