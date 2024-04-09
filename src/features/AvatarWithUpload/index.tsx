@@ -59,7 +59,7 @@ const AvatarWithUpload = memo<AvatarWithUploadProps>(
       <div className={styles} id={id} style={{ maxHeight: size, maxWidth: size, ...style }}>
         <Upload beforeUpload={handleUploadAvatar} itemRender={() => void 0} maxCount={1}>
           <NextImage
-            alt={avatar ? 'userAvatar' : 'LobeChat'}
+            alt={avatar ? 'userAvatar' : 'Chat'}
             height={size}
             src={!!avatar ? avatar : DEFAULT_USER_AVATAR_URL}
             unoptimized

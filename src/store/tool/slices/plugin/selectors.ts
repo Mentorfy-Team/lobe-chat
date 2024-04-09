@@ -24,8 +24,8 @@ const getPluginMetaById = (id: string) => (s: ToolStoreState) => {
 
 const getCustomPluginById = (id: string) => (s: ToolStoreState) =>
   installedPlugins(s).find((i) => i.identifier === id && i.type === 'customPlugin') as
-    | LobeToolCustomPlugin
-    | undefined;
+  | LobeToolCustomPlugin
+  | undefined;
 
 const getPluginManifestById = (id: string) => (s: ToolStoreState) =>
   getInstalledPluginById(id)(s)?.manifest;

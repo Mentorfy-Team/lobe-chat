@@ -86,7 +86,7 @@ beforeEach(() => {
       } as LobeChatPluginMeta,
     ],
   });
-  console.error = () => {};
+  console.error = () => { };
 });
 afterEach(() => {
   console.error = logError;

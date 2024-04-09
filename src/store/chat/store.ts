@@ -15,11 +15,11 @@ import { ChatTopicAction, chatTopic } from './slices/topic/action';
 
 export interface ChatStoreAction
   extends ChatMessageAction,
-    ChatTopicAction,
-    ShareAction,
-    ChatEnhanceAction,
-    ChatPluginAction,
-    ChatToolAction {}
+  ChatTopicAction,
+  ShareAction,
+  ChatEnhanceAction,
+  ChatPluginAction,
+  ChatToolAction { }
 
 export type ChatStore = ChatStoreAction & ChatStoreState;
 
@@ -41,7 +41,7 @@ const createStore: StateCreator<ChatStore, [['zustand/devtools', never]]> = (...
 export const useChatStore = createWithEqualityFn<ChatStore>()(
   subscribeWithSelector(
     devtools(createStore, {
-      name: 'LobeChat_Chat' + (isDev ? '_DEV' : ''),
+      name: 'Mentorfy GPT_Chat' + (isDev ? '_DEV' : ''),
     }),
   ),
   shallow,

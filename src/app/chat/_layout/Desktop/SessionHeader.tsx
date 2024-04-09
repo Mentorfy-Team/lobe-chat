@@ -1,4 +1,4 @@
-import { ActionIcon, Logo } from '@lobehub/ui';
+import { ActionIcon } from '@lobehub/ui';
 import { createStyles } from 'antd-style';
 import { MessageSquarePlus } from 'lucide-react';
 import { memo } from 'react';
@@ -10,6 +10,7 @@ import SyncStatusTag from '@/features/SyncStatusInspector';
 import { useSessionStore } from '@/store/session';
 
 import SessionSearchBar from '../../features/SessionSearchBar';
+import { Logo } from '@/components/Logo';
 
 export const useStyles = createStyles(({ css, token }) => ({
   logo: css`

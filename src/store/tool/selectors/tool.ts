@@ -32,58 +32,58 @@ const getAPIName = (identifier: string, name: string, type?: string) => {
 
 const enabledSchema =
   (tools: string[] = []) =>
-  (s: ToolStoreState): ChatCompletionTool[] => {
-    const list = pluginSelectors
-      .installedPluginManifestList(s)
-      .concat(s.builtinTools.map((b) => b.manifest as LobeChatPluginManifest))
-      // 如果存在 enabledPlugins，那么只启用 enabledPlugins 中的插件
-      .filter((m) => tools.includes(m?.identifier))
-      .flatMap((manifest) =>
-        manifest.api.map((m) => ({
-          ...m,
-          name: getAPIName(manifest.identifier, m.name, manifest.type),
-        })),
-      );
+    (s: ToolStoreState): ChatCompletionTool[] => {
+      const list = pluginSelectors
+        .installedPluginManifestList(s)
+        .concat(s.builtinTools.map((b) => b.manifest as LobeChatPluginManifest))
+        // 如果存在 enabledPlugins，那么只启用 enabledPlugins 中的插件
+        .filter((m) => tools.includes(m?.identifier))
+        .flatMap((manifest) =>
+          manifest.api.map((m) => ({
+            ...m,
+            name: getAPIName(manifest.identifier, m.name, manifest.type),
+          })),
+        );
 
-    return uniqBy(list, 'name').map((i) => ({ function: i, type: 'function' }));
-  };
+      return uniqBy(list, 'name').map((i) => ({ function: i, type: 'function' }));
+    };
 
 const enabledSystemRoles =
   (tools: string[] = []) =>
-  (s: ToolStoreState) => {
-    const toolsSystemRole = pluginSelectors
-      .installedPluginManifestList(s)
-      .concat(s.builtinTools.map((b) => b.manifest as LobeChatPluginManifest))
-      // 如果存在 enabledPlugins，那么只启用 enabledPlugins 中的插件
-      .filter((m) => tools.includes(m?.identifier))
-      .map((manifest) => {
-        if (!manifest) return '';
+    (s: ToolStoreState) => {
+      const toolsSystemRole = pluginSelectors
+        .installedPluginManifestList(s)
+        .concat(s.builtinTools.map((b) => b.manifest as LobeChatPluginManifest))
+        // 如果存在 enabledPlugins，那么只启用 enabledPlugins 中的插件
+        .filter((m) => tools.includes(m?.identifier))
+        .map((manifest) => {
+          if (!manifest) return '';
 
-        const meta = manifest.meta || {};
+          const meta = manifest.meta || {};
 
-        const title = pluginHelpers.getPluginTitle(meta) || manifest.identifier;
-        const systemRole = manifest.systemRole || pluginHelpers.getPluginDesc(meta);
+          const title = pluginHelpers.getPluginTitle(meta) || manifest.identifier;
+          const systemRole = manifest.systemRole || pluginHelpers.getPluginDesc(meta);
 
-        const methods = manifest.api
-          .map((m) =>
-            [`#### ${getAPIName(manifest.identifier, m.name, manifest.type)}`, m.description].join(
-              '\n\n',
-            ),
-          )
+          const methods = manifest.api
+            .map((m) =>
+              [`#### ${getAPIName(manifest.identifier, m.name, manifest.type)}`, m.description].join(
+                '\n\n',
+              ),
+            )
+            .join('\n\n');
+
+          return [`### ${title}`, systemRole, 'The APIs you can use:', methods].join('\n\n');
+        })
+        .filter(Boolean);
+
+      if (toolsSystemRole.length > 0) {
+        return ['## Tools', 'You can use these tools below:', ...toolsSystemRole]
+          .filter(Boolean)
           .join('\n\n');
+      }
 
-        return [`### ${title}`, systemRole, 'The APIs you can use:', methods].join('\n\n');
-      })
-      .filter(Boolean);
-
-    if (toolsSystemRole.length > 0) {
-      return ['## Tools', 'You can use these tools below:', ...toolsSystemRole]
-        .filter(Boolean)
-        .join('\n\n');
-    }
-
-    return '';
-  };
+      return '';
+    };
 
 const metaList = (s: ToolStoreState): LobeToolMeta[] => {
   const pluginList = pluginSelectors.installedPluginMetaList(s) as LobeToolMeta[];
@@ -93,16 +93,16 @@ const metaList = (s: ToolStoreState): LobeToolMeta[] => {
 
 const getMetaById =
   (id: string) =>
-  (s: ToolStoreState): MetaData | undefined =>
-    metaList(s).find((m) => m.identifier === id)?.meta;
+    (s: ToolStoreState): MetaData | undefined =>
+      metaList(s).find((m) => m.identifier === id)?.meta;
 
 const getManifestById =
   (id: string) =>
-  (s: ToolStoreState): LobeChatPluginManifest | undefined =>
-    pluginSelectors
-      .installedPluginManifestList(s)
-      .concat(s.builtinTools.map((b) => b.manifest as LobeChatPluginManifest))
-      .find((i) => i.identifier === id);
+    (s: ToolStoreState): LobeChatPluginManifest | undefined =>
+      pluginSelectors
+        .installedPluginManifestList(s)
+        .concat(s.builtinTools.map((b) => b.manifest as LobeChatPluginManifest))
+        .find((i) => i.identifier === id);
 
 // 获取插件 manifest 加载状态
 const getManifestLoadingStatus = (id: string) => (s: ToolStoreState) => {

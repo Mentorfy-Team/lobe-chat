@@ -1,7 +1,8 @@
-import { Icon, Logo } from '@lobehub/ui';
+import { Icon } from '@lobehub/ui';
 import { Loader2 } from 'lucide-react';
 import { memo } from 'react';
 import { Center, Flexbox } from 'react-layout-kit';
+import { Logo } from '../Logo';
 
 const FullscreenLoading = memo<{ title?: string }>(({ title }) => {
   return (

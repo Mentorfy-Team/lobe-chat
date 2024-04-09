@@ -31,7 +31,7 @@ const createStore: StateCreator<ToolStore, [['zustand/devtools', never]]> = (...
 
 export const useToolStore = createWithEqualityFn<ToolStore>()(
   devtools(createStore, {
-    name: 'LobeChat_Tool' + (isDev ? '_DEV' : ''),
+    name: 'Mentorfy GPT_Tool' + (isDev ? '_DEV' : ''),
   }),
   shallow,
 );

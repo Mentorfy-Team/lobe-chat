@@ -18,7 +18,7 @@ export default memo<SettingsCommonProps>((props) => {
       <PageTitle title={t('tab.common')} />
       <Theme />
       <Common {...props} />
-      <Footer>LobeChat v{CURRENT_VERSION}</Footer>
+      <Footer>Mentorfy GPT v{CURRENT_VERSION}</Footer>
     </>
   );
 });

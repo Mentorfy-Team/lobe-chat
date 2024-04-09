@@ -14,9 +14,9 @@ import { SessionGroupAction, createSessionGroupSlice } from './slices/sessionGro
 
 export interface SessionStore
   extends SessionAction,
-    AgentAction,
-    SessionGroupAction,
-    SessionStoreState {}
+  AgentAction,
+  SessionGroupAction,
+  SessionStoreState { }
 
 const createStore: StateCreator<SessionStore, [['zustand/devtools', never]]> = (...parameters) => ({
   ...initialState,
@@ -30,7 +30,7 @@ const createStore: StateCreator<SessionStore, [['zustand/devtools', never]]> = (
 export const useSessionStore = createWithEqualityFn<SessionStore>()(
   subscribeWithSelector(
     devtools(createStore, {
-      name: 'LobeChat_Session' + (isDev ? '_DEV' : ''),
+      name: 'Mentorfy GPT_Session' + (isDev ? '_DEV' : ''),
     }),
   ),
   shallow,

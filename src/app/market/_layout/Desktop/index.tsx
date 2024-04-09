@@ -40,7 +40,7 @@ const Desktop = memo<PropsWithChildren>(({ children }) => {
 
           <Flexbox gap={16} style={{ maxWidth: MAX_WIDTH, position: 'relative', width: '100%' }}>
             <Center>
-              <h1 className={styles.title}>Find & Use The Best Agents</h1>
+              <h1 className={styles.title}>Busque e use os melhores agentes</h1>
               <GridBackground
                 animation
                 className={styles.background}

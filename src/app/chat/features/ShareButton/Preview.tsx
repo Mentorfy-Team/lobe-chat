@@ -1,4 +1,4 @@
-import { Avatar, ChatHeaderTitle, Logo, Markdown } from '@lobehub/ui';
+import { Avatar, ChatHeaderTitle, Markdown } from '@lobehub/ui';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
@@ -12,6 +12,7 @@ import { agentSelectors, sessionSelectors } from '@/store/session/selectors';
 import PluginTag from '../PluginTag';
 import { useStyles } from './style';
 import { FieldType } from './type';
+import { Logo } from '@/components/Logo';
 
 const Preview = memo<FieldType & { title?: string }>(
   ({ title, withSystemRole, withBackground, withFooter }) => {
