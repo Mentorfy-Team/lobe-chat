@@ -13,7 +13,7 @@ export interface AgentsMarketIndexItem {
 
 export type AgentsMarketItem = AgentsMarketIndexItem & LobeAgentSettings;
 
-export interface Mentorfy GPTAgentsMarketIndex {
+export interface LobeChatAgentsMarketIndex {
   agents: AgentsMarketIndexItem[];
   schemaVersion: 1;
   tags: string[];

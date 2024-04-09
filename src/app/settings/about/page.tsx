@@ -9,7 +9,6 @@ import PageTitle from '@/components/PageTitle';
 import { useGlobalStore } from '@/store/global';
 import { commonSelectors } from '@/store/global/selectors';
 
-import AboutList from './AboutList';
 import Analytics from './Analytics';
 
 const useStyles = createStyles(({ css }) => ({

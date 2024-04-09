@@ -1,4 +1,4 @@
-import { Bot, Cloudy, Info, Mic2, Settings2, Webhook } from 'lucide-react';
+import { Bot, Cloudy, Mic2, Settings2, Webhook } from 'lucide-react';
 import Link from 'next/link';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
