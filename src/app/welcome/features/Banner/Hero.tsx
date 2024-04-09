@@ -1,12 +1,9 @@
-import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
 import { genSize, useStyles } from './style';
-
-const LogoThree = dynamic(() => import('@lobehub/ui/es/LogoThree'));
-const LogoSpline = dynamic(() => import('@lobehub/ui/es/LogoThree/LogoSpline'));
 
 const Hero = memo<{ mobile?: boolean; width: number }>(({ width, mobile }) => {
   const size: any = {
@@ -27,13 +24,19 @@ const Hero = memo<{ mobile?: boolean; width: number }>(({ width, mobile }) => {
     <>
       <Flexbox
         style={{
-          height: size.logo,
+          height: size.logo * 0.8,
           marginBottom: size.marginBottom,
           marginTop: size.marginTop,
           position: 'relative',
         }}
       >
-        {mobile ? <LogoThree size={size.logo} /> : <LogoSpline height={'100%'} width={'100%'} />}
+        {/* {mobile ? <LogoThree size={size.logo} /> : <LogoSpline height={'100%'} width={'100%'} />} */}
+        <Image
+          alt="Mentorfy"
+          height={size.logo * 0.5}
+          src="/images/logo-transparent.png"
+          width={size.logo * 0.7}
+        />
       </Flexbox>
       <div className={styles.title} style={{ fontSize: size.title }}>
         <strong style={mobile ? { fontSize: '1.2em' } : {}}>Mentorfy GPT</strong>
