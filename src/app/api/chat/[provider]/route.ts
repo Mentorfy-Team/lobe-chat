@@ -13,7 +13,7 @@ export const runtime = 'edge';
 
 export const preferredRegion = getPreferredRegion();
 
-function concatenateUint8Arrays(arrays) {
+function concatenateUint8Arrays(arrays: any[]) {
   let totalLength = arrays.reduce((acc, value) => acc + value.length, 0);
   let result = new Uint8Array(totalLength);
   let length = 0;
@@ -49,12 +49,17 @@ export const POST = async (req: Request, { params }: { params: { provider: strin
 
     // ============  2. create chat completion   ============ //
 
+    if (!req.body) throw new Error('Request body is null');
     let dataChunks = [];
     const reader = req.body.getReader();
-    while (true) {
+    let reading = true;
+    while (reading) {
       const { done, value } = await reader.read();
-      if (done) break;
-      dataChunks.push(value);
+      if (done) {
+        reading = false;
+      } else {
+        dataChunks.push(value);
+      }
     }
     const fullMessage = new TextDecoder().decode(concatenateUint8Arrays(dataChunks));
     const data = JSON.parse(fullMessage) as ChatStreamPayload;
