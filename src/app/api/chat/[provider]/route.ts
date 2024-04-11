@@ -13,7 +13,7 @@ export const runtime = 'edge';
 
 export const preferredRegion = getPreferredRegion();
 
-function concatenateUint8Arrays(arrays: any[]) {
+const concatenateUint8Arrays = (arrays: any[]) => {
   let totalLength = arrays.reduce((acc, value) => acc + value.length, 0);
   let result = new Uint8Array(totalLength);
   let length = 0;
@@ -26,6 +26,8 @@ function concatenateUint8Arrays(arrays: any[]) {
 
 export const POST = async (req: Request, { params }: { params: { provider: string } }) => {
   const { provider } = params;
+
+  
 
   try {
     // ============  1. init chat model   ============ //
