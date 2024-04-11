@@ -13,6 +13,17 @@ export const runtime = 'edge';
 
 export const preferredRegion = getPreferredRegion();
 
+function concatenateUint8Arrays(arrays) {
+  let totalLength = arrays.reduce((acc, value) => acc + value.length, 0);
+  let result = new Uint8Array(totalLength);
+  let length = 0;
+  for (let array of arrays) {
+    result.set(array, length);
+    length += array.length;
+  }
+  return result;
+}
+
 export const POST = async (req: Request, { params }: { params: { provider: string } }) => {
   const { provider } = params;
 
@@ -38,7 +49,15 @@ export const POST = async (req: Request, { params }: { params: { provider: strin
 
     // ============  2. create chat completion   ============ //
 
-    const data = (await req.json()) as ChatStreamPayload;
+    let dataChunks = [];
+    const reader = req.body.getReader();
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      dataChunks.push(value);
+    }
+    const fullMessage = new TextDecoder().decode(concatenateUint8Arrays(dataChunks));
+    const data = JSON.parse(fullMessage) as ChatStreamPayload;
 
     const tracePayload = getTracePayload(req);
 
