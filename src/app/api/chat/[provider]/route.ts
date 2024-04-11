@@ -15,7 +15,17 @@ export const preferredRegion = getPreferredRegion();
 export const POST = checkAuth(async (req: Request, { params, jwtPayload }) => {
   const { provider } = params;
 
-  
+  // eslint-disable-next-line unicorn/consistent-function-scoping
+  const concatenateUint8Arrays = (arrays: any[]) => {
+    let totalLength = arrays.reduce((acc, value) => acc + value.length, 0);
+    let result = new Uint8Array(totalLength);
+    let length = 0;
+    for (let array of arrays) {
+      result.set(array, length);
+      length += array.length;
+    }
+    return result;
+  }
 
   try {
     // ============  1. init chat model   ============ //
