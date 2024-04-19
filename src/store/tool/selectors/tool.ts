@@ -32,18 +32,19 @@ const getAPIName = (identifier: string, name: string, type?: string) => {
 
 const enabledSchema =
   (tools: string[] = []) =>
-    (s: ToolStoreState): ChatCompletionTool[] => {
-      const list = pluginSelectors
-        .installedPluginManifestList(s)
-        .concat(s.builtinTools.map((b) => b.manifest as LobeChatPluginManifest))
-        // 如果存在 enabledPlugins，那么只启用 enabledPlugins 中的插件
-        .filter((m) => tools.includes(m?.identifier))
-        .flatMap((manifest) =>
-          manifest.api.map((m) => ({
-            ...m,
-            name: getAPIName(manifest.identifier, m.name, manifest.type),
-          })),
-        );
+  (s: ToolStoreState): ChatCompletionTool[] => {
+    const list = pluginSelectors
+      .installedPluginManifestList(s)
+      .concat(s.builtinTools.map((b) => b.manifest as LobeChatPluginManifest))
+      // 如果存在 enabledPlugins，那么只启用 enabledPlugins 中的插件
+      .filter((m) => tools.includes(m?.identifier))
+      .flatMap((manifest) =>
+        manifest.api.map((m) => ({
+          description: m.description,
+          name: getAPIName(manifest.identifier, m.name, manifest.type),
+          parameters: m.parameters,
+        })),
+      );
 
       return uniqBy(list, 'name').map((i) => ({ function: i, type: 'function' }));
     };
