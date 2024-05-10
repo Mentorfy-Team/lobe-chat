@@ -8,11 +8,11 @@ import { Flexbox } from 'react-layout-kit';
 
 import DataImporter from '@/features/DataImporter';
 import { configService } from '@/services/config';
-import { GlobalStore, useGlobalStore } from '@/store/global';
+import { useGlobalStore } from '@/store/global';
 import { SidebarTabKey } from '@/store/global/initialState';
 
 export interface BottomActionProps {
-  tab?: GlobalStore['sidebarKey'];
+  tab?: SidebarTabKey;
 }
 
 const BottomActions = memo<BottomActionProps>(({ tab }) => {
