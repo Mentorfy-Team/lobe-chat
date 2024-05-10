@@ -10,9 +10,10 @@ import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
 import { USAGE_DOCUMENTS } from '@/const/url';
-import { useChatInput } from '@/features/ChatInput/useChatInput';
+import { useSendMessage } from '@/features/ChatInput/useSend';
+import { useChatStore } from '@/store/chat';
 
-const useStyles = createStyles(({ css, token }) => ({
+const useStyles = createStyles(({ css, token, responsive }) => ({
   card: css`
     cursor: pointer;
 
@@ -25,6 +26,10 @@ const useStyles = createStyles(({ css, token }) => ({
 
     &:hover {
       background: ${token.colorBgElevated};
+    }
+
+    ${responsive.mobile} {
+      padding: 8px 16px;
     }
   `,
   icon: css`
@@ -51,17 +56,14 @@ const qa = shuffle([
   'q13',
   'q14',
   'q15',
-]).slice(0, 5);
+]);
 
-const QuestionSuggest = memo(() => {
-  const { onInput, onSend } = useChatInput();
+const QuestionSuggest = memo<{ mobile?: boolean }>(({ mobile }) => {
+  const [updateInputMessage] = useChatStore((s) => [s.updateInputMessage]);
+
   const { t } = useTranslation('welcome');
   const { styles } = useStyles();
-
-  const handoleSend = (qa: string) => {
-    onInput(qa);
-    onSend();
-  };
+  const sendMessage = useSendMessage();
 
   return (
     <Flexbox gap={8} width={'100%'}>
@@ -76,7 +78,7 @@ const QuestionSuggest = memo(() => {
         </Link>
       </Flexbox>
       <Flexbox gap={8} horizontal wrap={'wrap'}>
-        {qa.map((item) => {
+        {qa.slice(0, mobile ? 2 : 5).map((item) => {
           const text = t(`guide.qa.${item}` as any);
           return (
             <Flexbox
@@ -85,7 +87,10 @@ const QuestionSuggest = memo(() => {
               gap={8}
               horizontal
               key={item}
-              onClick={() => handoleSend(text)}
+              onClick={() => {
+                updateInputMessage(text);
+                sendMessage({ isWelcomeQuestion: true });
+              }}
             >
               {t(text)}
             </Flexbox>
