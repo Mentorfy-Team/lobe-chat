@@ -1,6 +1,6 @@
 'use client';
 
-import { ActionIcon, Logo, MobileNavBar } from '@lobehub/ui';
+import { ActionIcon, MobileNavBar } from '@lobehub/ui';
 import { MessageSquarePlus } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { memo } from 'react';

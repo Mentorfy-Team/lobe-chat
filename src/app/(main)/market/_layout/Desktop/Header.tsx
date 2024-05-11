@@ -1,6 +1,6 @@
 'use client';
 
-import { ChatHeader, Logo } from '@lobehub/ui';
+import { ChatHeader } from '@lobehub/ui';
 import { createStyles } from 'antd-style';
 import { memo } from 'react';
 
