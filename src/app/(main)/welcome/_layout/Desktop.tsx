@@ -16,7 +16,7 @@ const DesktopLayout = ({ children }: PropsWithChildren) => {
       style={{ overflow: 'hidden', position: 'relative' }}
       width={'100%'}
     >
-      <Logo style={{ alignSelf: 'flex-start' }} extra={'Descobrir'} size={36} type={'text'} />
+      <Logo extra={'Descobrir'} size={36} style={{ alignSelf: 'flex-start' }} type={'text'} />
       <GridShowcase innerProps={{ gap: 24 }} style={{ maxWidth: 1024 }} width={'100%'}>
         {children}
       </GridShowcase>
