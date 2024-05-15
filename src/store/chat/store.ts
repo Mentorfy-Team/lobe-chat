@@ -6,20 +6,20 @@ import { StateCreator } from 'zustand/vanilla';
 import { isDev } from '@/utils/env';
 
 import { ChatStoreState, initialState } from './initialState';
+import { ChatBuiltinToolAction, chatToolSlice } from './slices/builtinTool/action';
 import { ChatEnhanceAction, chatEnhance } from './slices/enchance/action';
 import { ChatMessageAction, chatMessage } from './slices/message/action';
 import { ChatPluginAction, chatPlugin } from './slices/plugin/action';
 import { ShareAction, chatShare } from './slices/share/action';
-import { ChatToolAction, chatToolSlice } from './slices/tool/action';
 import { ChatTopicAction, chatTopic } from './slices/topic/action';
 
 export interface ChatStoreAction
   extends ChatMessageAction,
-  ChatTopicAction,
-  ShareAction,
-  ChatEnhanceAction,
-  ChatPluginAction,
-  ChatToolAction { }
+    ChatTopicAction,
+    ShareAction,
+    ChatEnhanceAction,
+    ChatPluginAction,
+    ChatBuiltinToolAction {}
 
 export type ChatStore = ChatStoreAction & ChatStoreState;
 
