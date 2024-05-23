@@ -230,7 +230,7 @@ In addition, these plugins are not limited to news aggregation, but can also ext
 | [Social Search](https://chat-preview.lobehub.com/settings/agent)<br/><sup>By **say-apps** on **2024-05-02**</sup>         | The Social Search provides access to tweets, users, followers, images, media and more.<br/>`social` `twitter` `x` `search` |
 | [Search Google via Serper](https://chat-preview.lobehub.com/settings/agent)<br/><sup>By **Barry** on **2024-04-30**</sup> | Google search engine via Serper.dev free API (2500x🆓/month)<br/>`web` `search`                                            |
 
-> 📊 Total plugins: [<kbd>**58**</kbd>](https://github.com/lobehub/lobe-chat-plugins)
+> 📊 Total plugins: [<kbd>**56**</kbd>](https://github.com/lobehub/lobe-chat-plugins)
 
  <!-- PLUGIN LIST -->
 
@@ -262,14 +262,14 @@ Our marketplace is not just a showcase platform but also a collaborative space. 
 
 <!-- AGENT LIST -->
 
-| Recent Submits                                                                                                                                                                             | Description                                                                                                                                                                                                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [SF Symbols Finder](https://chat-preview.lobehub.com/market?agent=sf-symbols-finder)<br/><sup>By **[inquiry-paring0a](https://github.com/inquiry-paring0a)** on **2024-05-08**</sup>       | Master Apple SF Symbols, select symbols that match the description<br/>`sf-symbols` `expert` `icon` `symbol` `plugin`                                                                                                                                                                                                       |
-| [GhostWriter Pro](https://chat-preview.lobehub.com/market?agent=ghostwriter-pro-ai)<br/><sup>By **[EarlofSandwhich](https://github.com/EarlofSandwhich)** on **2024-05-07**</sup>          | A sophisticated AI-powered ghostwriting agent designed to craft high-quality content across a diverse range of genres and formats. Equipped with advanced language models, GhostWriter Pro excels in creating personalized, engaging, and research-backed writing that meets professional standards.<br/>`author` `writing` |
-| [Video to Blog Post Assistant](https://chat-preview.lobehub.com/market?agent=video-2-blog-assistant)<br/><sup>By **[yayoinoyume](https://github.com/yayoinoyume)** on **2024-05-06**</sup> | Helps you quickly organize messy subtitles into beautiful blog posts<br/>`subtitle-organization` `blog-post-formatting` `video-to-blog`                                                                                                                                                                                     |
-| [Art Evaluation Tutor](https://chat-preview.lobehub.com/market?agent=wanwusheng-art)<br/><sup>By **[dingyufei615](https://github.com/dingyufei615)** on **2024-05-06**</sup>               | Specializes in teaching children's art, meticulously evaluates works, pays attention to details, and adapts to students of different age groups.<br/>`art-education` `evaluation` `creativity` `teaching` `painting`                                                                                                        |
+| Recent Submits                                                                                                                                                              | Description                                                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Bahasa/English Translator](https://chat-preview.lobehub.com/market?agent=bahasa-translation)<br/><sup>By **[xenstar](https://github.com/xenstar)** on **2024-05-22**</sup> | Translates text into Bahasa or English, as needed<br/>`english` `translation` `writing` `bahasa`                                                                  |
+| [Zen Master](https://chat-preview.lobehub.com/market?agent=buddhism-master)<br/><sup>By **[epochaudio](https://github.com/epochaudio)** on **2024-05-22**</sup>             | Well-versed in classics, adept at using Buddhism to guide life<br/>`buddhist-studies` `zen-buddhism` `buddhist-scripture-interpretation` `wisdom-q-a`             |
+| [Chinese Historian](https://chat-preview.lobehub.com/market?agent=chinese-historian)<br/><sup>By **[epochaudio](https://github.com/epochaudio)** on **2024-05-22**</sup>    | Specialized in Chinese historical research, adept at applying ancient wisdom to analyze modern issues.<br/>`historical-research` `chinese-history`                |
+| [Confucian Scholar](https://chat-preview.lobehub.com/market?agent=confucian-sage)<br/><sup>By **[epochaudio](https://github.com/epochaudio)** on **2024-05-22**</sup>       | A scholar who is proficient in Confucian classics and emphasizes the promotion of righteousness and morality.<br/>`confucian-scholar` `promoter-of-righteousness` |
 
-> 📊 Total agents: [<kbd>**249**</kbd> ](https://github.com/lobehub/lobe-chat-agents)
+> 📊 Total agents: [<kbd>**269**</kbd> ](https://github.com/lobehub/lobe-chat-agents)
 
  <!-- AGENT LIST -->
 
@@ -714,7 +714,7 @@ This project is [MIT](./LICENSE) licensed.
 [image-feat-theme]: https://gw.alipayobjects.com/zos/kitchen/pvus1lo%26Z7/darkmode.webp
 [image-feat-tts]: https://github-production-user-asset-6210df.s3.amazonaws.com/17870709/284072124-c9853d8d-f1b5-44a8-a305-45ebc0f6d19a.png
 [image-feat-vision]: https://github-production-user-asset-6210df.s3.amazonaws.com/17870709/284072129-382bdf30-e3d6-4411-b5a0-249710b8ba08.png
-[image-overview]: https://github.com/lobehub/lobe-chat/assets/28616219/8b04c3c9-3d71-4fb4-bd9b-a4f415c5876d
+[image-overview]: https://github.com/lobehub/lobe-chat/assets/17870709/56b95d48-f573-41cd-8b38-387bf88bc4bf
 [image-star]: https://github.com/lobehub/lobe-chat/assets/17870709/cb06b748-513f-47c2-8740-d876858d7855
 [issues-link]: https://img.shields.io/github/issues/lobehub/lobe-chat.svg?style=flat
 [lobe-chat-plugins]: https://github.com/lobehub/lobe-chat-plugins
