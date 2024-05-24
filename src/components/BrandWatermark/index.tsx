@@ -1,7 +1,6 @@
 'use client';
 
 import { createStyles } from 'antd-style';
-import Link from 'next/link';
 import { memo } from 'react';
 import { Flexbox, FlexboxProps } from 'react-layout-kit';
 
@@ -17,7 +16,7 @@ const useStyles = createStyles(({ token, css }) => ({
 }));
 
 const BrandWatermark = memo<Omit<FlexboxProps, 'children'>>(({ style, ...rest }) => {
-  const { styles, theme } = useStyles();
+  const { theme } = useStyles();
   return (
     <Flexbox
       align={'center'}
