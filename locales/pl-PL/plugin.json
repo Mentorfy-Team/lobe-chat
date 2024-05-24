@@ -104,7 +104,7 @@
     },
     "type": {
       "lobe": "Mentorfy GPT 插件",
-      "openai": "OpenAI 插件"
+      "openai": "OpenAI 插件",
       "lobe": "Wtyczka Mentorfy GPT",
       "openai": "Wtyczka OpenAI"
     },
