@@ -10,25 +10,25 @@
   "handle_links": "auto",
   "icons": [
     {
-      "src": "/icons/icon-192x192.png",
+      "src": "icon-new.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icons/icon-192x192.maskable.png",
+      "src": "icon-new.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/icons/icon-512x512.png",
+      "src": "icon-new.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icons/icon-512x512.maskable.png",
+      "src": "icon-new.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
@@ -38,7 +38,7 @@
   "launch_handler": {
     "client_mode": ["navigate-existing", "auto"]
   },
-  "name": "LobeChat",
+  "name": "Mentorfy GPT",
   "orientation": "portrait",
   "related_applications": [
     {
@@ -109,7 +109,7 @@
       "form_factor": "wide"
     }
   ],
-  "short_name": "LobeChat",
+  "short_name": "Mentorfy GPT",
   "splash_pages": null,
   "start_url": ".",
   "tab_strip": {
