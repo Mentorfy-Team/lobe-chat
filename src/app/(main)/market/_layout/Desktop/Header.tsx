@@ -1,6 +1,7 @@
 'use client';
 
 import { ChatHeader } from '@lobehub/ui';
+import { LobeChat } from '@lobehub/ui/brand';
 import { createStyles } from 'antd-style';
 import { memo } from 'react';
 
@@ -19,7 +20,7 @@ const Header = memo(() => {
 
   return (
     <ChatHeader
-      left={<Logo className={styles.logo} extra={'Descobrir'} size={36} type={'text'} />}
+      left={<LobeChat className={styles.logo} extra={'Discover'} size={36} type={'text'} />}
       right={<ShareAgentButton />}
     />
   );

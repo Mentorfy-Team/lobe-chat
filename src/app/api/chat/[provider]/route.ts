@@ -1,6 +1,6 @@
 import { getPreferredRegion } from '@/app/api/config';
 import { createErrorResponse } from '@/app/api/errorResponse';
-import { ChatCompletionErrorPayload } from '@/libs/agent-runtime';
+import { AgentRuntime, ChatCompletionErrorPayload } from '@/libs/agent-runtime';
 import { ChatErrorType } from '@/types/fetch';
 import { ChatStreamPayload } from '@/types/openai/chat';
 import { getTracePayload } from '@/utils/trace';
@@ -12,7 +12,7 @@ export const runtime = 'edge';
 
 export const preferredRegion = getPreferredRegion();
 
-export const POST = checkAuth(async (req: Request, { params, jwtPayload }) => {
+export const POST = checkAuth(async (req: Request, { params, jwtPayload, createRuntime }) => {
   const { provider } = params;
 
   // eslint-disable-next-line unicorn/consistent-function-scoping
@@ -29,7 +29,12 @@ export const POST = checkAuth(async (req: Request, { params, jwtPayload }) => {
 
   try {
     // ============  1. init chat model   ============ //
-    const agentRuntime = await initAgentRuntimeWithUserPayload(provider, jwtPayload);
+    let agentRuntime: AgentRuntime;
+    if (createRuntime) {
+      agentRuntime = createRuntime(jwtPayload);
+    } else {
+      agentRuntime = await initAgentRuntimeWithUserPayload(provider, jwtPayload);
+    }
 
     // ============  2. create chat completion   ============ //
 
