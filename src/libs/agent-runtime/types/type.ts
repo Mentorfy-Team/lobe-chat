@@ -22,6 +22,7 @@ export interface CreateChatCompletionOptions {
 }
 
 export enum ModelProvider {
+  Ai360 = 'ai360',
   Anthropic = 'anthropic',
   Azure = 'azure',
   Baichuan = 'baichuan',
@@ -32,12 +33,14 @@ export enum ModelProvider {
   Minimax = 'minimax',
   Mistral = 'mistral',
   Moonshot = 'moonshot',
+  Novita = 'novita',
   Ollama = 'ollama',
   OpenAI = 'openai',
   OpenRouter = 'openrouter',
   Perplexity = 'perplexity',
   Qwen = 'qwen',
   Stepfun = 'stepfun',
+  Taichu = 'taichu',
   TogetherAI = 'togetherai',
   ZeroOne = 'zeroone',
   ZhiPu = 'zhipu',

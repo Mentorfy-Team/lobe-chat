@@ -1,4 +1,6 @@
 import {
+  Ai360,
+  AiMass,
   Anthropic,
   Baichuan,
   DeepSeek,
@@ -7,6 +9,7 @@ import {
   Minimax,
   Mistral,
   Moonshot,
+  Novita,
   OpenAI,
   OpenRouter,
   Perplexity,
@@ -81,12 +84,23 @@ const ProviderAvatar = memo<ProviderAvatarProps>(({ provider }) => {
       return <Stepfun color={Stepfun.colorPrimary} size={56} />;
     }
 
+    case ModelProvider.Taichu: {
+      return <AiMass.Color size={56} />;
+    }
+
     case ModelProvider.TogetherAI: {
       return <Together color={Together.colorPrimary} size={56} />;
     }
 
     case ModelProvider.ZeroOne: {
       return <ZeroOne color={ZeroOne.colorPrimary} size={56} />;
+    }
+    case ModelProvider.Novita: {
+      return <Novita color={Novita.colorPrimary} size={56} />;
+    }
+
+    case ModelProvider.Ai360: {
+      return <Ai360 color={Ai360.colorPrimary} size={56} />;
     }
 
     default:

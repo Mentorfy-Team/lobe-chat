@@ -16,6 +16,7 @@ export interface AWSBedrockKeyVault {
 }
 
 export interface UserKeyVaults {
+  ai360?: OpenAICompatibleKeyVault;
   anthropic?: OpenAICompatibleKeyVault;
   azure?: AzureOpenAIKeyVault;
   baichuan?: OpenAICompatibleKeyVault;
@@ -27,6 +28,7 @@ export interface UserKeyVaults {
   minimax?: OpenAICompatibleKeyVault;
   mistral?: OpenAICompatibleKeyVault;
   moonshot?: OpenAICompatibleKeyVault;
+  novita?: OpenAICompatibleKeyVault;
   ollama?: OpenAICompatibleKeyVault;
   openai?: OpenAICompatibleKeyVault;
   openrouter?: OpenAICompatibleKeyVault;
@@ -34,6 +36,7 @@ export interface UserKeyVaults {
   perplexity?: OpenAICompatibleKeyVault;
   qwen?: OpenAICompatibleKeyVault;
   stepfun?: OpenAICompatibleKeyVault;
+  taichu?: OpenAICompatibleKeyVault;
   togetherai?: OpenAICompatibleKeyVault;
   zeroone?: OpenAICompatibleKeyVault;
   zhipu?: OpenAICompatibleKeyVault;
