@@ -2,6 +2,7 @@
 
 import { LobeHub } from '@lobehub/ui/brand';
 import { createStyles } from 'antd-style';
+import Link from 'next/link';
 import { memo } from 'react';
 import { Flexbox, FlexboxProps } from 'react-layout-kit';
 
@@ -31,7 +32,6 @@ const BrandWatermark = memo<Omit<FlexboxProps, 'children'>>(({ style, ...rest })
     >
       <span>Powered by</span>
       <Link
-        className={styles.logoLink}
         href={`https://lobehub.com?utm_source=${UTM_SOURCE}&utm_content=brand_watermark`}
         target={'_blank'}
       >

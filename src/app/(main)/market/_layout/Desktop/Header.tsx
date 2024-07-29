@@ -6,7 +6,6 @@ import { createStyles } from 'antd-style';
 import { memo } from 'react';
 
 import ShareAgentButton from '../../features/ShareAgentButton';
-import { Logo } from '@/components/Logo';
 
 export const useStyles = createStyles(({ css, token }) => ({
   logo: css`

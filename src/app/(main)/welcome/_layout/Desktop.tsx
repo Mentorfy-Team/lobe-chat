@@ -2,7 +2,7 @@ import { GridShowcase } from '@lobehub/ui';
 import { LobeHub } from '@lobehub/ui/brand';
 import { PropsWithChildren } from 'react';
 import { Flexbox } from 'react-layout-kit';
-import { Logo } from '@/components/Logo';
+
 import Follow from '@/features/Follow';
 
 const COPYRIGHT = `© ${new Date().getFullYear()} LobeHub, LLC`;

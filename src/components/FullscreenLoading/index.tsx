@@ -3,7 +3,6 @@ import { LobeChat } from '@lobehub/ui/brand';
 import { Loader2 } from 'lucide-react';
 import { memo } from 'react';
 import { Center, Flexbox } from 'react-layout-kit';
-import { Logo } from '../Logo';
 
 const FullscreenLoading = memo<{ title?: string }>(({ title }) => {
   return (

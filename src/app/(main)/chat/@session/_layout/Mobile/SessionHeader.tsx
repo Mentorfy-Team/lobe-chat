@@ -13,7 +13,6 @@ import UserAvatar from '@/features/User/UserAvatar';
 import { featureFlagsSelectors, useServerConfigStore } from '@/store/serverConfig';
 import { useSessionStore } from '@/store/session';
 import { mobileHeaderSticky } from '@/styles/mobileHeader';
-import { Logo } from '@/components/Logo';
 
 const Header = memo(() => {
   const [createSession] = useSessionStore((s) => [s.createSession]);

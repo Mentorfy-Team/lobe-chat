@@ -15,7 +15,6 @@ import { featureFlagsSelectors, useServerConfigStore } from '@/store/serverConfi
 import { useSessionStore } from '@/store/session';
 
 import SessionSearchBar from '../../features/SessionSearchBar';
-import { Logo } from '@/components/Logo';
 
 export const useStyles = createStyles(({ css, token }) => ({
   logo: css`

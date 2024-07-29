@@ -15,7 +15,6 @@ import { sessionMetaSelectors, sessionSelectors } from '@/store/session/selector
 import PluginTag from '../PluginTag';
 import { useStyles } from './style';
 import { FieldType } from './type';
-import { Logo } from '@/components/Logo';
 
 const Preview = memo<FieldType & { title?: string }>(
   ({ title, withSystemRole, withBackground, withFooter }) => {
