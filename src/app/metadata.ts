@@ -1,12 +1,11 @@
 import { Metadata } from 'next';
 
-import { appEnv, getAppConfig } from '@/config/app';
-import { OFFICIAL_URL } from '@/const/url';
+import { appEnv } from '@/config/app';
+import { OFFICIAL_URL, OG_URL } from '@/const/url';
 import { translation } from '@/server/translation';
 
 const title = 'Mentorfy GPT';
 
-const { SITE_URL = OFFICIAL_URL } = getAppConfig();
 const BASE_PATH = appEnv.NEXT_PUBLIC_BASE_PATH;
 
 // if there is a base path, then we don't need the manifest
@@ -27,7 +26,7 @@ export const generateMetadata = async (): Promise<Metadata> => {
       shortcut: '/images/favicon.ico',
     },
     manifest: noManifest ? undefined : '/manifest.json',
-    metadataBase: new URL(SITE_URL),
+    metadataBase: new URL(OFFICIAL_URL),
     openGraph: {
       description: t('chat.description'),
       images: [
